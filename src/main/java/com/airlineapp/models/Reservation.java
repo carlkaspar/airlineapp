@@ -1,24 +1,23 @@
 package com.airlineapp.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import lombok.*;
 
 import javax.persistence.*;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
+@Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private Long scheduleId;
     private String name;
-    private String bookingCode;
+    private String reservationCode;
     @Enumerated(value = EnumType.STRING)
-    private ResevationStatus status;
+    private ReservationStatus status;
 }

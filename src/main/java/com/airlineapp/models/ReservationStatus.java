@@ -1,6 +1,6 @@
 package com.airlineapp.models;
 
-public enum ResevationStatus {
+public enum ReservationStatus {
     BOOKED,
     CANCELLED
 }
